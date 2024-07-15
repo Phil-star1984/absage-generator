@@ -8,24 +8,36 @@ const AbsageComponent = () => {
   const [randomText, setRandomText] = useState([]);
   const [textNumber, setTextNumber] = useState("");
 
-  const name = decodeURIComponent(searchParams.get("name"));
-  const jobTitle = decodeURIComponent(searchParams.get("jobTitle"));
-  const company = decodeURIComponent(searchParams.get("company"));
-  const applicantEmail = decodeURIComponent(searchParams.get("applicantEmail"));
+  const name = decodeURIComponent(searchParams.get("name") || "");
+  const jobTitle = decodeURIComponent(searchParams.get("jobTitle") || "");
+  const company = decodeURIComponent(searchParams.get("company") || "");
+  const applicantEmail = decodeURIComponent(
+    searchParams.get("applicantEmail") || ""
+  );
+  const fromApplicant = decodeURIComponent(
+    searchParams.get("fromApplicant") || ""
+  );
 
   useEffect(() => {
-    const randomNumber = Math.floor(
-      Math.random() * absageTexte.absageTexte.length
-    );
-    const textParts = absageTexte.absageTexte[randomNumber].text;
-    setRandomText(textParts);
-    setTextNumber(randomNumber);
+    if (fromApplicant === "true") {
+      // Wenn der Link vom Bewerber geöffnet wird
+      const savedTextNumber = parseInt(searchParams.get("textNumber"), 10);
+      const textParts = absageTexte.absageTexte[savedTextNumber]?.text || [];
+      setRandomText(textParts);
+      setTextNumber(savedTextNumber);
+    } else {
+      // Für ein Unternehmen, das den Text generiert
+      const randomNumber = Math.floor(
+        Math.random() * absageTexte.absageTexte.length
+      );
+      const textParts = absageTexte.absageTexte[randomNumber].text;
+      setRandomText(textParts);
+      setTextNumber(randomNumber);
+    }
 
     const interval = setInterval(() => {
-      // Generiere eine Zahl zwischen 1 und 4 (wenn du Bilder von img1 bis img4 hast)
       const randomCount = Math.floor(Math.random() * 4) + 1;
       const randomImage = `/images/img${randomCount}.jpeg`;
-      console.log(randomImage);
       setBackgroundImage(randomImage);
     }, 4000);
 
@@ -34,7 +46,6 @@ const AbsageComponent = () => {
 
   const mailtoLink = () => {
     const bodyText =
-      /* `${randomText[0]}${name}${randomText[1]}${jobTitle}${randomText[2]}${company}${randomText[3]}` + */
       `Hallo ${name}, unser Feedback findest du unter folgendem Link: ` +
       `${import.meta.env.VITE_BASE_URL}absage?name=${encodeURIComponent(
         name
@@ -42,7 +53,7 @@ const AbsageComponent = () => {
         company
       )}&applicantEmail=${encodeURIComponent(
         applicantEmail
-      )}&textNumber=${textNumber}`;
+      )}&textNumber=${textNumber}&fromApplicant=true`;
 
     return `mailto:${applicantEmail}?subject=Deine Bewerbung als ${jobTitle}&body=${encodeURIComponent(
       bodyText
@@ -70,12 +81,16 @@ const AbsageComponent = () => {
           <span className="color-emphasis">{company}</span>
           {randomText[3]}
         </h1>
-        <div className="absage-buttons-container">
-          <button onClick={() => (window.location.href = mailtoLink())}>
-            An Bewerber senden
-          </button>
-          <button onClick={() => window.history.back()}>Neu generieren</button>
-        </div>
+        {!fromApplicant && (
+          <div className="absage-buttons-container">
+            <button onClick={() => (window.location.href = mailtoLink())}>
+              An Bewerber senden
+            </button>
+            <button onClick={() => window.history.back()}>
+              Neu generieren
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
