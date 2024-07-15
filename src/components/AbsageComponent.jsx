@@ -60,6 +60,12 @@ const AbsageComponent = () => {
     )}`;
   };
 
+  const IT = "{it}";
+
+  const handleReload = () => {
+    window.location.reload();
+  };
+
   return (
     <div
       className="background-container"
@@ -70,6 +76,7 @@ const AbsageComponent = () => {
         backgroundSize: "cover",
       }}
     >
+      <h1 className="logo">Take{IT}easy</h1>
       <div className="absage-container">
         <h1>
           {randomText[0]}
@@ -86,9 +93,7 @@ const AbsageComponent = () => {
             <button onClick={() => (window.location.href = mailtoLink())}>
               An Bewerber senden
             </button>
-            <button onClick={() => window.history.back()}>
-              Neu generieren
-            </button>
+            <button onClick={handleReload}>Neu generieren</button>
           </div>
         )}
       </div>
