@@ -12,7 +12,7 @@ const HomeComponent = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       // Generiere eine Zahl zwischen 1 und 4 (wenn du Bilder von img1 bis img4 hast)
-      const randomNumber = Math.floor(Math.random() * 4) + 1;
+      const randomNumber = Math.floor(Math.random() * 5) + 1;
       const randomImage = `/images/img${randomNumber}.jpeg`;
       setBackgroundImage(randomImage);
       /* console.log(randomImage); */

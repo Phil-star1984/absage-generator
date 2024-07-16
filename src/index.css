@@ -32,6 +32,7 @@ body {
 
 .absage-container {
   background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(15px);
   border: 2px solid white;
   border-radius: 15px;
   display: flex;

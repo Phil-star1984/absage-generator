@@ -11,9 +11,9 @@
     {
       "text": [
         "Hallo ",
-        "danke für Ihre Bewerbung als ",
+        "danke für deine Bewerbung als ",
         " bei ",
-        ". Wir haben uns für jemand anderen entschieden, was bedeutet, dass Sie jetzt frei sind, die Welt zu retten oder zumindest eine andere Firma glücklich zu machen. Viel Erfolg!"
+        ". Wir haben uns für jemand anderen entschieden, was bedeutet, dass du jetzt frei bist, die Welt zu retten oder zumindest eine andere Firma glücklich zu machen. Viel Erfolg!"
       ]
     },
     {
@@ -21,15 +21,15 @@
         "Liebe/r ",
         "es war uns eine Freude, Ihre Bewerbung für die Stelle als ",
         " bei ",
-        " zu lesen. Leider haben wir uns für einen anderen Bewerber entschieden, der Zauberei kann. (Nur ein Scherz, aber können Sie das wirklich ausschließen?) Wir wünschen Ihnen viel Glück bei Ihrer Suche nach einem Job, bei dem keine magischen Fähigkeiten erforderlich sind!"
+        " zu lesen. Leider haben wir uns für einen anderen Bewerber entschieden, der Zauberei kann. (Nur ein Scherz, aber können Sie das wirklich ausschließen?) Wir wünschen Dir viel Glück bei Deiner Suche nach einem Job, bei dem keine magischen Fähigkeiten erforderlich sind!"
       ]
     },
     {
       "text": [
         "Hallo ",
-        "vielen Dank, dass Sie uns mit Ihrer Bewerbung als ",
+        "vielen Dank, dass Du uns mit Deiner Bewerbung als ",
         " bei ",
-        " beehrt haben. Wir mussten leider Nein sagen, aber auf der positiven Seite, Ihr Talent kann jetzt woanders strahlen – wie ein verlorener Diamant, der darauf wartet, gefunden zu werden. Viel Erfolg!"
+        " beehrt hast. Wir mussten leider Nein sagen, aber auf der positiven Seite, Dein Talent kann jetzt woanders strahlen – wie ein verlorener Diamant, der darauf wartet, gefunden zu werden. Viel Erfolg!"
       ]
     },
     {
@@ -53,7 +53,7 @@
         "Hey ",
         "geil, dass du dich beworben hast als ",
         " bei ",
-        "dein Skillset ist wie eine seltene Pokémon-Karte, leider haben wir schon das perfekte Exemplar in unserem Team. Keep grinding, und denk dran: Auch Ash Ketchum hat nicht sofort alle Orden gewonnen! Viel Erfolg bei deiner weiteren Suche!"
+        " Dein Skillset ist wie eine seltene Pokémon-Karte, leider haben wir schon das perfekte Exemplar in unserem Team. Keep grinding, und denk dran: Auch Ash Ketchum hat nicht sofort alle Orden gewonnen! Viel Erfolg bei deiner weiteren Suche!"
       ]
     },
     {
@@ -86,6 +86,30 @@
         "nachdem wir deine Bewerbung gesehen haben als ",
         " bei ",
         " sind wir zu dem Schluss gekommen, dass du eigentlich unser neuer Chef sein solltest. Da das aber ein bisschen awkward wäre, lassen wir's lieber. Du wirst bestimmt bald eine Firma finden, die deine Chefvibes zu schätzen weiß. Bis dahin: Keep rocking!"
+      ]
+    },
+    {
+      "text": [
+        "Yo ",
+        "deine Skills sind next level, leider sind wir noch auf tutorial mode. Die Bewerbung als ",
+        " bei ",
+        " war krass, aber du bist einfach zu OP für uns. Stay legendary und gg!"
+      ]
+    },
+    {
+      "text": [
+        "Hey ",
+        "deine Bewerbung kam rein wie ein Epic Win, aber leider sind wir wie ein Bug im System, nicht ready für solche High Scores. Deine Skills als ",
+        " bei ",
+        " sind wie aus einem anderen Universum. Wir wünschen dir viel Erfolg beim Level-Up bei deinem nächsten Job!"
+      ]
+    },
+    {
+      "text": [
+        "Hi ",
+        "wir haben deine Bewerbung als ",
+        " bei ",
+        " gesehen und waren wie, wow, this person hacks the system! Aber tbh, wir suchen mehr einen n00b, der nicht bemerkt, dass unser Kaffee mies ist. Viel Glück beim Finden einer Crew, die deine mad skills würdigt!"
       ]
     }
   ]

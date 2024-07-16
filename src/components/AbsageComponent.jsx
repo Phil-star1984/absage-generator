@@ -36,7 +36,7 @@ const AbsageComponent = () => {
     }
 
     const interval = setInterval(() => {
-      const randomCount = Math.floor(Math.random() * 4) + 1;
+      const randomCount = Math.floor(Math.random() * 5) + 1;
       const randomImage = `/images/img${randomCount}.jpeg`;
       setBackgroundImage(randomImage);
     }, 4000);
@@ -87,6 +87,9 @@ const AbsageComponent = () => {
           {randomText[2]}
           <span className="color-emphasis">{company}</span>
           {randomText[3]}
+          <br />
+          <br />
+          Dein Team von <span className="color-emphasis">{company}</span>
         </h1>
         {!fromApplicant && (
           <div className="absage-buttons-container">
