@@ -44,10 +44,7 @@ const HomeComponent = () => {
       }}
     >
       <h1 className="logo">Take{IT}easy</h1>
-      <form
-        onSubmit={(e) => e.preventDefault()}
-        style={{ padding: "40px", backgroundColor: "rgba(255, 255, 255, 0.8)" }}
-      >
+      <form onSubmit={(e) => e.preventDefault()}>
         <h1>Generiere eine Absage</h1>
         <label>
           Jobtitel:
